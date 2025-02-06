@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Wesky Dorcenna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #78654b;
+            --accent-color: #ffffff; /* Blanc */
+            --text-color: #ffffff; /* Blanc */
+            --brown-light: #D69B65; /* Marron clair */
+            --brown-medium: #291a03; /* Marron moyen */
+            --brown-dark: #6B4F3B; /* Marron foncé */
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+        }
+    
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95) !important; /* Noir transparent */
+            backdrop-filter: blur(10px);
+        }
+    
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+    
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Icône du hamburger en blanc */
+.navbar-toggler-icon {
+    background-color: var(--accent-color); /* Blanc */
+}
+
+    
+        #hero {
+            background: linear-gradient(135deg, var(--brown-dark), var(--brown-light));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+    
+        .hero-img {
+            border: 5px solid var(--accent-color);
+            padding: 5px;
+            transition: transform 0.3s;
+        }
+    
+        .hero-img:hover {
+            transform: scale(1.05);
+        }
+    
+        .section-title {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+    
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+    
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+            height: 100%;
+            color: var(--text-color);
+        }
+    
+        .card-text, .card-title, .card-body p {
+            color: var(--text-color);
+        }
+    
+        .card:hover {
+            transform: translateY(-10px);
+        }
+    
+        .btn-custom {
+            background-color: var(--brown-medium);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            transition: all 0.3s;
+        }
+    
+        .btn-custom:hover {
+            background-color: var(--brown-light);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+    
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+    
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    
+        #contact {
+            background: linear-gradient(45deg, var(--brown-medium), var(--brown-light));
+        }
+    
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-color);
+        }
+    
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--text-color);
+            border-color: var(--brown-medium);
+        }
+    
+        .form-control::placeholder {
+            color: var(--text-color);
+        }
+        
+        footer i {
+            margin-right: 8px;
+        }
+
+        footer h3 {
+            text-align: justify;
+        }
+
+        footer i {
+            margin-right: 8px;
+        }
+
+        footer p, footer ul {
+            text-align: justify;
+        }   
+    </style>
+</head>
+
+<body>
+    
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">WD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#videos">Vidéos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Témoignages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <img src="https://www.profilebakery.com/wp-content/uploads/2023/04/Profile-Image-AI.jpg" alt="Wesky Dorcenna" class="img-fluid rounded-circle hero-img" style="width: 300px;">
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="display-3 fw-bold mb-4">Wesky Dorcenna</h1>
+                    <p class="lead mb-4">Développeur Web et Mobile</p>
+                    <a href="#portfolio" class="btn btn-custom btn-lg">Voir mes projets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Mes Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <h3 class="h4 mb-3">Développement Mobile</h3>
+                            <p>Création d'applications mobiles natives et cross-platform</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <h3 class="h4 mb-3">Développement Web</h3>
+                            <p>Conception de sites web modernes et réactifs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <h3 class="h4 mb-3">Design UI/UX</h3>
+                            <p>Design d'interfaces utilisateur intuitives et attractives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Mes Projets</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="findmypro.jpg" class="card-img-top" alt="FindMyPro">
+                        <div class="card-body">
+                            <h5 class="card-title">FindMyPro</h5>
+                            <p class="card-text">Application mobile iOS pour trouver des professionnels</p>
+                            <a href="https://findmypro.vercel.app/" class="btn btn-custom" target="_blank">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pizzamia.jpg" class="card-img-top" alt="PizzaMia">
+                        <div class="card-body">
+                            <h5 class="card-title">PizzaMia</h5>
+                            <p class="card-text">Application e-commerce pour la vente de pizzas</p>
+                            <a href="#" class="btn btn-custom">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="ecommerce.jpg" class="card-img-top" alt="E-commerce">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce</h5>
+                            <p class="card-text">Site web transactionnel avec paiements sécurisés</p>
+                            <a href="#" class="btn btn-custom">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Mes Vidéos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Témoignages</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="mb-0">
+                                <p>"Wesky est un développeur exceptionnel. Sa capacité à comprendre rapidement les besoins et à résoudre des problèmes complexes avec des solutions simples est impressionnante."</p>
+                                <footer class="text-end">- Stanmley Plonquet</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="mb-0">
+                                <p>"Travailler avec Wesky a été une expérience enrichissante. Il maîtrise parfaitement les technologies qu'il utilise et il sait s'adapter à n'importe quelle situation."</p>
+                                <footer class="text-end">- Ryan Coutard</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Contactez-moi</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Mot de passe" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Envoyer</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h4 mb-4">Coordonnées</h3>
+                            <p><strong>Téléphone:</strong> +1 4385092299</p>
+                            <p><strong>Email:</strong> dorcenna@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Wesky Dorcenna</h3>
+                    <p>Développeur Web & Mobile</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Liens</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/Dorcky" class="text-white"target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#" class="text-white"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact</h3>
+                    <p>Email: dorcennawesky@gmail.com</p>
+                    <p>Téléphone: +1 4385092299</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
