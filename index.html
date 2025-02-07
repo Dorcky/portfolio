@@ -106,7 +106,7 @@
     
         .btn-custom:hover {
             background-color: var(--brown-light);
-            color: var(--primary-color);
+            color:white;
             transform: translateY(-2px);
         }
     
@@ -161,14 +161,67 @@
 
         footer p, footer ul {
             text-align: justify;
-        }   
+        } 
+        
+        
+        #services .card {
+        padding: 0 !important; /* Supprime le padding de la carte */
+        overflow: hidden; /* Empêche le débordement de l'image */
+    }
+
+    #services .card-body {
+        padding: 1.5rem; /* Ajoute du padding uniquement au contenu */
+    }
+
+    .service-img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        margin: 0; /* Supprime les marges */
+        border-radius: 0; /* Supprime l'arrondi si présent */
+        display: block; /* Élimine tout espace blanc en dessous de l'image */
+    }
+
+    /* Ajustement pour garder le style de carte cohérent */
+    #services .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s;
+        height: 100%;
+    }
+
+        .project-img {
+            height: 300px; /* Ajustez cette hauteur à la taille souhaitée */
+            object-fit: cover; /* L'image va couvrir l'espace sans déformation */
+            width: 100%; /* La largeur de l'image prendra 100% de la largeur du conteneur */
+        }
+
+        #portfolio .card {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                transition: transform 0.3s;
+                height: 100%;
+                display: flex; /* Ajout de Flexbox */
+                flex-direction: column; /* Aligne les éléments de la carte en colonne */
+                color: var(--text-color);
+            }
+
+            #portfolio .card-body {
+                flex: 1; /* Cela permet au corps de la carte de prendre tout l'espace disponible */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* Assure que le bouton est en bas */
+            }
+
+            #portfolio .btn-custom {
+                margin-top: auto; /* Permet de pousser le bouton vers le bas */
+            }
+
     </style>
 </head>
 
-<body>
-    
-    
-</head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -214,6 +267,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 text-center p-4">
+                        <img src="https://live.staticflickr.com/65535/54312204965_d539680b8f_b.jpg" alt="Service 1" class="card-img-top service-img" />
                         <div class="card-body">
                             <h3 class="h4 mb-3">Développement Mobile</h3>
                             <p>Création d'applications mobiles natives et cross-platform</p>
@@ -222,6 +276,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 text-center p-4">
+                        <img src="https://live.staticflickr.com/65535/54311786491_2050f8fb15_b.jpg" alt="Service 2" class="card-img-top service-img" />
                         <div class="card-body">
                             <h3 class="h4 mb-3">Développement Web</h3>
                             <p>Conception de sites web modernes et réactifs</p>
@@ -230,6 +285,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 text-center p-4">
+                        <img src="https://live.staticflickr.com/65535/54312215630_775dd4b0dd_w.jpg" alt="Service 3" class="card-img-top service-img" />
                         <div class="card-body">
                             <h3 class="h4 mb-3">Design UI/UX</h3>
                             <p>Design d'interfaces utilisateur intuitives et attractives</p>
@@ -239,7 +295,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-5">
         <div class="container">
@@ -247,37 +303,38 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="findmypro.jpg" class="card-img-top" alt="FindMyPro">
+                        <img src="https://live.staticflickr.com/65535/54311976618_15ebbf06a2_b.jpg" class="card-img-top project-img" alt="FindMyPro">
                         <div class="card-body">
                             <h5 class="card-title">FindMyPro</h5>
-                            <p class="card-text">Application mobile iOS pour trouver des professionnels</p>
-                            <a href="https://findmypro.vercel.app/" class="btn btn-custom" target="_blank">Voir plus</a>
+                            <p class="card-text">Application mobile iOS et Web React Js pour trouver des professionnels</p>
+                            <a href="https://findmypro.vercel.app/" class="btn btn-custom" target="_blank">Voir le projet</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="pizzamia.jpg" class="card-img-top" alt="PizzaMia">
+                        <img src="https://live.staticflickr.com/65535/54312155495_fbcfbf3a60_b.jpg" class="card-img-top project-img" alt="PizzaMia">
                         <div class="card-body">
                             <h5 class="card-title">PizzaMia</h5>
                             <p class="card-text">Application e-commerce pour la vente de pizzas</p>
-                            <a href="#" class="btn btn-custom">Voir plus</a>
+                            <a href="#" class="btn btn-custom">Voir le projet</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="ecommerce.jpg" class="card-img-top" alt="E-commerce">
+                        <img src="https://live.staticflickr.com/65535/54310902767_c446d37175_b.jpg" class="card-img-top project-img" alt="E-commerce">
                         <div class="card-body">
-                            <h5 class="card-title">E-commerce</h5>
-                            <p class="card-text">Site web transactionnel avec paiements sécurisés</p>
-                            <a href="#" class="btn btn-custom">Voir plus</a>
+                            <h5 class="card-title">Le Catalogueur</h5>
+                            <p class="card-text">Première expérience avec HTML et CSS</p>
+                            <a href="#" class="btn btn-custom">Voir le projet</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Videos Section -->
     <section id="videos" class="py-5">
@@ -314,7 +371,7 @@
                         <div class="card-body">
                             <blockquote class="mb-0">
                                 <p>"Wesky est un développeur exceptionnel. Sa capacité à comprendre rapidement les besoins et à résoudre des problèmes complexes avec des solutions simples est impressionnante."</p>
-                                <footer class="text-end">- Stanmley Plonquet</footer>
+                                <footer class="text-end">- Stanley Plonquet</footer>
                             </blockquote>
                         </div>
                     </div>
@@ -344,8 +401,9 @@
                             <input type="email" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Mot de passe" required>
+                            <input type="text" class="form-control" placeholder="Titre du message" required>
                         </div>
+                        
                         <div class="mb-3">
                             <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
                         </div>
@@ -357,7 +415,7 @@
                         <div class="card-body">
                             <h3 class="h4 mb-4">Coordonnées</h3>
                             <p><strong>Téléphone:</strong> +1 4385092299</p>
-                            <p><strong>Email:</strong> dorcenna@example.com</p>
+                            <p><strong>Email:</strong> dorcennawesky@gmail.com</p>
                         </div>
                     </div>
                 </div>
